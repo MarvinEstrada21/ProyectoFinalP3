@@ -1,18 +1,19 @@
 #include "Cartelera.h"
 #include <string>
-#ifndef PELICULAS_H
-#define PELICULAS_H
+
+#ifndef PELICULA_H
+#define PELICULA_H
 
 using namespace std;
 
-class Peliculas : public Cartelera{
+class Pelicula : public Cartelera{
 	private:
 		string genero;
 	public:
-		Peliculas(string, string);
+		Pelicula(string, string);
 		//genero, horario
 		string getGenero();
 		void setGenero(string);
-		string getTipoPelicula(string);
+		//string getTipoPelicula(string);
 };
 #endif

@@ -2,8 +2,9 @@
 #include <string>
 
 #include "Cartelera.h"
-#include "Peliculas.h"
-#include "Personas.h"
+#include "Pelicula.h"
+#include "Persona.h"
+#include "Sala.h"
 
 using namespace std;
 

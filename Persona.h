@@ -1,23 +1,25 @@
 #include <string>
 
-#ifndef PERSONAS_H
-#define PERSONAS_H
+#ifndef PERSONA_H
+#define PERSONA_H
 
-class Personas{
+using namespace std;
+
+class Persona{
 	protected:
 		string nombre;
 		int edad;
 		string id;
 	public:
-		Personas(string, int, string);
+		Persona(string, int, string);
 
 		string getNombre();
 		void setNombre(string);
 
 		int getEdad();
-		void setEdad();
+		void setEdad(int);
 
 		string getId();
-		void setId();
+		void setId(string);
 };
 #endif

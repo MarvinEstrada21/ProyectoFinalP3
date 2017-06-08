@@ -2,6 +2,10 @@
 
 using namespace std;
 
+Cartelera::Cartelera(){
+	horario = "";
+}
+
 Cartelera::Cartelera(string horario){
 	this -> horario = horario;
 }
@@ -14,6 +18,6 @@ void Cartelera::setHorario(string shorario){
 	horario = shorario;
 }
 
-string getTipoPelicula(string tipo){
+/*string getTipoPelicula(string tipo){
 	return "";
-}
+}*/
