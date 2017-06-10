@@ -11,6 +11,6 @@ Dulceria :: Dulceria(double precio) {
 	this -> precio = precio;
 }
 
-double Dulceria :: getPrecio(string tipo) {
+double Dulceria :: getPrecio() {
 	return precio;
 }

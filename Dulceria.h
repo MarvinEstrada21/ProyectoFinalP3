@@ -12,6 +12,6 @@ class Dulceria {
 		Dulceria();
 		Dulceria(double);
 
-		virtual double getPrecio(string);
+		virtual double getPrecio();
 };
 #endif

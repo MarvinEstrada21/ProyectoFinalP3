@@ -2,7 +2,9 @@
 #include <string>
 
 #include "Cartelera.h"
+#include "Comida.h"
 #include "Dulceria.h"
+#include "Dulces.h"
 #include "Palomitas.h"
 #include "Pelicula.h"
 #include "Persona.h"

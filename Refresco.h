@@ -15,6 +15,12 @@ class Refresco : public Dulceria {
 		Refresco();
 		Refresco(string, string, double);
 
-		double getPrecio(string);
+		string getTamano();
+		void setTamano(string);
+
+		string getSabor();
+		void setSabor(string);
+		
+		double getPrecio();
 };
 #endif
