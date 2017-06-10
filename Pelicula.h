@@ -10,6 +10,7 @@ class Pelicula : public Cartelera{
 	private:
 		string genero;
 	public:
+		Pelicula();
 		Pelicula(string, string);
 		//genero, horario
 		string getGenero();

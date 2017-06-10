@@ -2,6 +2,10 @@
 
 using namespace std;
 
+Pelicula :: Pelicula() {
+	genero = "";
+}
+
 Pelicula :: Pelicula(string genero, string horario) : Cartelera(horario) {
 	this -> genero = genero;
 }

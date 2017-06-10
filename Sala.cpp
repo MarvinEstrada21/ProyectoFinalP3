@@ -4,6 +4,7 @@ using namespace std;
 
 Sala :: Sala() {
 	numero = 0;
+	pelicula = new Pelicula();
 }
 
 Sala :: Sala(int numero) {
@@ -12,6 +13,10 @@ Sala :: Sala(int numero) {
 
 int Sala :: getNumero() {
 	return numero;
+}
+
+void Sala :: setNumero(int sNumero) {
+	numero = sNumero;
 }
 
 string Sala :: tipoSala(string tipo) {
