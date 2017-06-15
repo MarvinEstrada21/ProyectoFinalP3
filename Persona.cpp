@@ -2,6 +2,12 @@
 
 using namespace std;
 
+Persona :: Persona() {
+	nombre = "";
+	edad = 0;
+	id = "";
+}
+
 Persona :: Persona(string nombre, int edad, string id) {
 	this -> nombre = nombre;
 	this -> edad = edad;

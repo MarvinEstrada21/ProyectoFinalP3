@@ -11,6 +11,7 @@ class Persona{
 		int edad;
 		string id;
 	public:
+		Persona();
 		Persona(string, int, string);
 
 		string getNombre();

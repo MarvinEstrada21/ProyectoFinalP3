@@ -10,6 +10,7 @@
 
 #include "Administrador.h"
 #include "Cartelera.h"
+#include "Cliente.h"
 #include "Comida.h"
 #include "Cliente.h"
 #include "Dulceria.h"
@@ -21,6 +22,7 @@
 #include "Refresco.h"
 #include "Trabajador.h"
 #include "Sala.h"
+#include "Trabajador.h"
 
 
 #ifndef CINE_H

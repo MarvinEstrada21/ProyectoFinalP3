@@ -24,7 +24,7 @@ double Empleado :: getSalario() {
 	return salario;
 }
 
-void Empleado :: setSalario(string salario) {
+void Empleado :: setSalario(double salario) {
 	this -> salario = salario;
 }
 
