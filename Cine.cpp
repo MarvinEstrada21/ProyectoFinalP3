@@ -7,7 +7,7 @@ Cine::Cine(){
 }
 
 void Cine::run(){
-		srand(time(NULL));
+		//srand(time(NULL));
 	initscr();
 	start_color();
 	echo();
@@ -94,4 +94,12 @@ void Cine::cleanScreen(){
 			mvprintw(i,j," ");
 		}
 	}
+}
+
+void Cine::boardPic(){
+	move(1,1);
+}
+
+void Cine::dibujologo(){
+	mvprintw(5,20, "Cine");
 }

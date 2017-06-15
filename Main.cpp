@@ -23,7 +23,7 @@
 using namespace std;
 
 int main(){
-	Cine cine;
-	cine.run();
+	Cine* cine;
+	cine->run();
 	return 0;
 }

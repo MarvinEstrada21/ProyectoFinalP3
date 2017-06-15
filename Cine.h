@@ -8,15 +8,20 @@
 #include <stdlib.h>
 #include <fstream>
 
+#include "Administrador.h"
 #include "Cartelera.h"
 #include "Comida.h"
+#include "Cliente.h"
 #include "Dulceria.h"
 #include "Dulces.h"
+#include "Empleado.h"
 #include "Palomitas.h"
 #include "Pelicula.h"
 #include "Persona.h"
 #include "Refresco.h"
+#include "Trabajador.h"
 #include "Sala.h"
+
 
 #ifndef CINE_H
 #define CINE_H
