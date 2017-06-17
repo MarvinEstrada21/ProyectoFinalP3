@@ -24,14 +24,49 @@ void Cine::run(){
 	while(seguir==true){
 		char respuesta1[1];
 		//Menu Principal
-		mvprintw(5, 20, "BIENVENIDO AL CINE:");
-		mvprintw(6, 20, "1) Ver una Pelicula ");
-		mvprintw(7, 20, "2) Comprar en la dulceria ");
-		mvprintw(8, 20, "3) SALIR ");
-		mvprintw(9, 20, "ELIGA OPCION: ");
+		mvprintw(5, 20, "---BIENVENIDO AL CINE---:");
+		mvprintw(6, 20, " 1) Agregar Persona ");
+		mvprintw(7, 20, " 2) Ver una Pelicula ");
+		mvprintw(8, 20, " 3) Comprar en la dulceria ");
+		mvprintw(9, 20, " 4) SALIR ");
+		mvprintw(10, 20, "ELIGA OPCION: ");
 		getstr(respuesta1);
 		cleanScreen();
 		if(respuesta1[0]=='1'){
+			char respuestapersona[1];
+			mvprintw(5, 20, " Que tipo de Persona quiere crear?: ");
+			mvprintw(6, 20, " 1) Un Empledo ");
+			mvprintw(7, 20, " 2) Un Cliente ");
+			mvprintw(8, 20, " 3)  Salir ");
+			mvprintw(9, 20, " Ingrese una opcion ");
+			getstr(respuestapersona);
+			cleanScreen();
+			if(respuestapersona[0]=='1'){
+				char respuestaempleado[1];
+				mvprintw(5, 20 , "Que tipo de empleado desea agregar?: ");
+				mvprintw(6, 20 ," 1) Un Administrador ");
+				mvprintw(7, 20 ," 2) Un Trabajador ");
+				mvprintw(8, 20 ," 3) Salir ");
+				mvprintw(9, 20, " Ingrese una opcion ");
+				getstr(respuestaempleado);
+				cleanScreen();
+				if(respuestaempleado[0]=='1'){
+					mvprintw(5,20, "Ingrese el nombre de la persona: ");
+					char nombre[50];
+					getstr(nombre);
+					string nombre1 = static_cast<char*>(nombre);
+					mvprintw(6,20, "Ingrese la edad: ");
+					char edad[2];
+					getstr(edad);
+					string edad1(edad);
+					int edad2 =atoi(edad1.c_str());
+				}else if(respuestaempleado[0]=='2'){
+
+				}
+			}else if(respuestapersona[0]=='2'){
+
+			}
+		}else if(respuesta1[0]=='2'){
 			char respuestapeliculas[1];
 			mvprintw(5, 20, " Eliga la pelicula que desea ver ");
 			mvprintw(6, 20, " 1) Baywatch  ");
@@ -59,7 +94,7 @@ void Cine::run(){
 			}else if(respuestapeliculas[0]=='7'){
 
 			}
-		}else if(respuesta1[0]=='2'){
+		}else if(respuesta1[0]=='3'){
 			char respuestacomida[1];
 			double precio;
 			mvprintw(5, 20, " Eliga la comida ");
@@ -122,4 +157,5 @@ void Cine::boardPic(){
 void Cine::dibujologo(){
 	mvprintw(5,20, "Cine");
 }
+
 
