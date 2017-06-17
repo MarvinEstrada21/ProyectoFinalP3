@@ -1,3 +1,5 @@
+#ifndef CINE_H
+#define CINE_H
 #include <vector>
 #include <string.h>
 #include <iostream>
@@ -25,8 +27,6 @@
 #include "Trabajador.h"
 
 
-#ifndef CINE_H
-#define CINE_H
 
 using namespace std;
 
@@ -42,8 +42,12 @@ class Cine{
 		void run();
 		void boardPic();
 		void dibujologo();
+		void cleanScreen();
+	/*	void run();
+		void boardPic();
+		void dibujologo();
 		void dibujodulce();
 		void dibujopelicula();
-		void cleanScreen();
+		void cleanScreen();*/
 };
 #endif

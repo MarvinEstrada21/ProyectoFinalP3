@@ -1,5 +1,6 @@
 #include "Cine.h"
 #include <ncurses.h>
+#include <vector>
 using namespace std;
 
 Cine::Cine(){
@@ -7,7 +8,7 @@ Cine::Cine(){
 }
 
 void Cine::run(){
-		//srand(time(NULL));
+		srand(time(NULL));
 	initscr();
 	start_color();
 	echo();
@@ -15,6 +16,10 @@ void Cine::run(){
 	dibujologo();
 	getch();
 	cleanScreen();
+	vector<Dulceria*> lista_dulceria;
+	vector<Comida*> lista_comida;
+	vector<Palomitas*> lista_palomitas;
+	Comida food;
 	bool seguir = true;
 	while(seguir==true){
 		char respuesta1[1];
@@ -26,66 +31,80 @@ void Cine::run(){
 		mvprintw(9, 20, "ELIGA OPCION: ");
 		getstr(respuesta1);
 		cleanScreen();
-		if(respuesta1[0] ='1'){
-			char respuesta2[1];
-			//menu de peliculas
-			mvprintw(5, 20, "Que tipo de pelicula quiere ver");
-			getstr(respuesta2);
+		if(respuesta1[0]=='1'){
+			char respuestapeliculas[1];
+			mvprintw(5, 20, " Eliga la pelicula que desea ver ");
+			mvprintw(6, 20, " 1) Baywatch  ");
+			mvprintw(7, 20, " 2) Cars 3 ");
+			mvprintw(8, 20, " 3) La Momia ");
+			mvprintw(9, 20, " 4) La Mujer Maravilla ");
+			mvprintw(10, 20, " 5) Como Ser Un Latin Lover ");
+			mvprintw(11, 20, " 6) Resident Evil ");
+			mvprintw(12, 20, " 7) Piratas del Caribe ");
+			mvprintw(13, 20, "Eliga una opcion ");
+			getstr(respuestapeliculas);
 			cleanScreen();
+			if(respuestapeliculas[0]=='1'){
 
-		}
-		if(respuesta1[1] = '2'){
-			//menu de dulces
-			bool menudulces =true;
-			while(menudulces==true){
-				char respuesta3[1];
-				mvprintw(5, 20, " Tipo de Dulces ");
-				mvprintw(6, 20, " 1) Comida ");
-				mvprintw(7, 20, " 2) Palomitas ");
-				mvprintw(8, 20, " 3) Refresco ");
-				mvprintw(9, 20, " 4) Dulces ");
-				mvprintw(10, 20, " 5) Salir ");
-				mvprintw(11, 20, "ELIGA UNA OPCION ");
-				getstr(respuesta3);
-				cleanScreen();
-				if(respuesta3[0]='1'){
-					bool menucomida =true;
-					while(menucomida==true){
-						char respuesta4[1];
-						mvprintw(5, 20, " Seleccion el tipo de comida ");
-						mvprintw(6, 20, " Hotdog ");
-						mvprintw(7, 20, " Hamburguesa ");
-						mvprintw(6, 20, " Papas ");
-						mvprintw(8, 20, " Panino ");
-						mvprintw(9, 20, " Nachos ");
-						mvprintw(10, 20, " Salir ");
-						getstr(respuesta4);
-						cleanScreen();
-					}
-				}else if(respuesta3[1]='2'){
-					char respuesta5[1];
-					mvprintw(5, 20, " Seleccion el tamano de las palomitas ");
-					mvprintw(6, 20, " Palomitas pequeñas ");
-					mvprintw(7, 20, " Palomitas medianas ");
-					mvprintw(8, 20, " Palomitas grandes ");
-					mvprintw(9, 20, " Salir ");
-					getstr(respuesta5);
-					cleanScreen();
-				}else if(respuesta3[2] ='3'){
+			}else if(respuestapeliculas[0]=='2'){
 
-				}
+			}else if(respuestapeliculas[0]=='3'){
+
+			}else if(respuestapeliculas[0]=='4'){
+
+			}else if(respuestapeliculas[0]=='5'){
+
+			}else if(respuestapeliculas[0]=='6'){
+
+			}else if(respuestapeliculas[0]=='7'){
+
 			}
-		}
-		else{
+		}else if(respuesta1[0]=='2'){
+			char respuestacomida[1];
+			double precio;
+			mvprintw(5, 20, " Eliga la comida ");
+			mvprintw(6, 20, " 1) Hotdog ");
+			mvprintw(7, 20, " 2) Nachos ");
+			mvprintw(8, 20, " 3) Hamburguesa ");
+			mvprintw(9, 20, " 4) Panino ");
+			mvprintw(10, 20, " 5) Papas ");
+			mvprintw(11, 20, " Eliga una opcion ");
+			getstr(respuestacomida);	
+			cleanScreen();
+			if(respuestacomida[0]=='1'){
+				precio = food.getPrecio();
+				mvprintw(13, 20, " Su total a pagar es: Lps. 45.00");
+				lista_comida.push_back(new Comida("Hotdog", precio));
+			}else if(respuestacomida[0]=='2'){
+				precio = food.getPrecio();
+				mvprintw(13, 20, " Su total a pagar es: Lps. 37.50");
+				lista_comida.push_back(new Comida("Nachos", precio));
+			}else if(respuestacomida[0]=='3'){
+				precio = food.getPrecio();
+				mvprintw(13, 20, " Su total a pagar es: Lps. 50.00");
+				lista_comida.push_back(new Comida("Hamburguesa", precio));
+			}else if(respuestacomida[0]=='4'){
+				precio = food.getPrecio();
+				mvprintw(13, 20, " Su total a pagar es: Lps. 55.00");
+				lista_comida.push_back(new Comida("Panino", precio));
+			}else if(respuestacomida[0]=='5'){
+				precio = food.getPrecio();
+				mvprintw(13, 20, " Su total a pagar es: Lps. 25.00");
+				lista_comida.push_back(new Comida("Papas", precio));
+			}
+
+
+		}else{
 			seguir=false;
 		}
-	}
-	mvprintw(10, 20, "NOS VEMOS LUEGO!");
+	
+	mvprintw(17, 20, "NOS VEMOS LUEGO!");
 	getch();
-
+	cleanScreen();
 	//cleanScreen()
 	noecho();
 	endwin();
+	}
 }
 
 void Cine::cleanScreen(){
@@ -103,3 +122,4 @@ void Cine::boardPic(){
 void Cine::dibujologo(){
 	mvprintw(5,20, "Cine");
 }
+

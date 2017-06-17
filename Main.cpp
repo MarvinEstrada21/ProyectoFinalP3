@@ -17,13 +17,13 @@
 #include <typeinfo>
 
 #include <ncurses.h>
-#include "Cine.h"
 #include <fstream>//para archivos binarios
+#include "Cine.h"
 
 using namespace std;
 
 int main(){
-	Cine* cine;
-	cine->run();
+	Cine cine;
+	cine.run();
 	return 0;
 }
