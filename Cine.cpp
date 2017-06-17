@@ -80,7 +80,24 @@ void Cine::run(){
 					string id1 =static_cast<char*>(nombre);
 				}
 			}else if(respuestapersona[0]=='2'){
-
+					mvprintw(5, 20, "Ingrese el nombre de la persona: ");
+					char nombre[50];
+					getstr(nombre);
+					string nombre1 = static_cast<char*>(nombre);
+					mvprintw(6, 20, "Ingrese la edad: ");
+					char edad[2];
+					getstr(edad);
+					string edad1(edad);
+					int edad2 =atoi(edad1.c_str());
+					mvprintw(7, 20, "Numero de ID ");
+					char id [50];
+					getstr(id);
+					string id1 =static_cast<char*>(nombre);
+					mvprintw(8, 20, "Cantidad de Dinero ");
+					char dinero[50];
+					getstr(dinero);
+					string dinero1(dinero);
+					int dinero2 =atoi(dinero1.c_str());
 			}
 		}else if(respuesta1[0]=='2'){
 			char respuestapeliculas[1];
