@@ -18,11 +18,3 @@ int Sala :: getNumero() {
 void Sala :: setNumero(int sNumero) {
 	numero = sNumero;
 }
-
-string Sala :: tipoSala(string tipo) {
-	if (tipo.compare("VIP") == 0) {
-		return "VIP";
-	} else {
-		return "Normal";
-	}
-}

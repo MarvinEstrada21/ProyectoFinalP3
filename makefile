@@ -1,5 +1,5 @@
-Main:	Main.o Administrador.o Cartelera.o Cliente.o Comida.o Dulceria.o Dulces.o Empleado.o Palomitas.o Pelicula.o Persona.o Refresco.o Sala.o Trabajador.o
-	g++ Main.o Administrador.o Cartelera.o Cliente.o Comida.o Dulceria.o Dulces.o Empleado.o Palomitas.o Pelicula.o Persona.o Refresco.o Sala.o Trabajador.o -o Main
+Main:	Main.o Administrador.o Cartelera.o Cine.o Cliente.o Comida.o Dulceria.o Dulces.o Empleado.o Palomitas.o Pelicula.o Persona.o Refresco.o Sala.o Trabajador.o
+	g++ Main.o Administrador.o Cartelera.o Cine.o Cliente.o Comida.o Dulceria.o Dulces.o Empleado.o Palomitas.o Pelicula.o Persona.o Refresco.o Sala.o Trabajador.o -o Main
 
 Main.o:	Main.cpp Cine.h
 	g++ -c Main.cpp
@@ -10,7 +10,7 @@ Cine.o:	Cine.cpp Cine.h Administrador.h Cartelera.h Cliente.h Comida.h Dulceria.
 Administrador.o:	Administrador.cpp Administrador.h Empleado.h
 	g++ -c Administrador.cpp
 
-Cartelera.o:	Cartelera.cpp Cartelera.h
+Cartelera.o:	Cartelera.cpp Cartelera.h Pelicula.h
 	g++ -c Cartelera.cpp
 
 Cliente.o:	Cliente.cpp Cliente.h Persona.h
@@ -31,7 +31,7 @@ Empleado.o:	Empleado.cpp Empleado.h Persona.h
 Palomitas.o:	Palomitas.cpp Palomitas.h Dulceria.h
 	g++ -c Palomitas.cpp
 
-Pelicula.o:	Pelicula.cpp Pelicula.h Cartelera.h
+Pelicula.o:	Pelicula.cpp Pelicula.h
 	g++ -c Pelicula.cpp
 
 Persona.o:	Persona.cpp Persona.h

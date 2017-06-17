@@ -13,8 +13,8 @@ class Sala {
 	public:
 		Sala();
 		Sala(int);
+
 		int getNumero();
 		void setNumero(int);
-		string tipoSala(string);
 };
 #endif

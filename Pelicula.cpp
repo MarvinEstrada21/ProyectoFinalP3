@@ -3,26 +3,26 @@
 using namespace std;
 
 Pelicula :: Pelicula() {
-	genero = "";
+
 }
 
-Pelicula :: Pelicula(string genero, string horario) : Cartelera(horario) {
+Pelicula :: Pelicula(string genero, string horario) {
 	this -> genero = genero;
+	this -> horario = horario;
 }
 
 string Pelicula :: getGenero() {
 	return genero;
 }
 
-void Pelicula :: setGenero(string sgenero) {
-	genero = sgenero;
+void Pelicula :: setGenero(string genero) {
+	this -> genero = genero;
 }
 
-/*string Peliculas::getTipoPelicula(string tipo){
-	string validar = "ESTRENO";
-	if (validar.compare(tipo) == 0){
-		return "ESTRENO";
-	} else {
-		return "NORMAL";
-	}
-}*/
+string Pelicula :: getHorario(){
+	return horario;
+}
+
+void Pelicula :: setHorario(string horario){
+	this -> horario = horario;
+}

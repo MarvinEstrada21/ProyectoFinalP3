@@ -2,22 +2,23 @@
 
 using namespace std;
 
-Cartelera::Cartelera(){
-	horario = "";
+Cartelera :: Cartelera() : Pelicula() {
+
 }
 
-Cartelera::Cartelera(string horario){
+Cartelera :: Cartelera(vector <Pelicula*> lista_peliculas, string formato, string genero, string horario) : Pelicula(genero, horario) {
+	this -> lista_peliculas = lista_peliculas;
 	this -> horario = horario;
 }
 
-string Cartelera::getHorario(){
-	return horario;
+string Cartelera :: getFormato() {
+	return formato;
 }
 
-void Cartelera::setHorario(string shorario){
-	horario = shorario;
+void Cartelera :: setFormato(string formato) {
+	this -> formato = formato;
 }
 
-/*string getTipoPelicula(string tipo){
-	return "";
-}*/
+Cartelera :: ~Cartelera() {
+
+}
