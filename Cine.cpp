@@ -51,17 +51,33 @@ void Cine::run(){
 				getstr(respuestaempleado);
 				cleanScreen();
 				if(respuestaempleado[0]=='1'){
-					mvprintw(5,20, "Ingrese el nombre de la persona: ");
+					mvprintw(5, 20, "Ingrese el nombre de la persona: ");
 					char nombre[50];
 					getstr(nombre);
 					string nombre1 = static_cast<char*>(nombre);
-					mvprintw(6,20, "Ingrese la edad: ");
+					mvprintw(6, 20, "Ingrese la edad: ");
 					char edad[2];
 					getstr(edad);
 					string edad1(edad);
 					int edad2 =atoi(edad1.c_str());
+					mvprintw(7, 20, "Numero de ID ");
+					char id [50];
+					getstr(id);
+					string id1 =static_cast<char*>(nombre);
 				}else if(respuestaempleado[0]=='2'){
-
+					mvprintw(5, 20, "Ingrese el nombre de la persona: ");
+					char nombre[50];
+					getstr(nombre);
+					string nombre1 = static_cast<char*>(nombre);
+					mvprintw(6, 20, "Ingrese la edad: ");
+					char edad[2];
+					getstr(edad);
+					string edad1(edad);
+					int edad2 =atoi(edad1.c_str());
+					mvprintw(7, 20, "Numero de ID ");
+					char id [50];
+					getstr(id);
+					string id1 =static_cast<char*>(nombre);
 				}
 			}else if(respuestapersona[0]=='2'){
 
@@ -131,9 +147,10 @@ void Cine::run(){
 
 		}else{
 			seguir=false;
+			mvprintw(17, 20, "NOS VEMOS LUEGO!");
+
 		}
 	
-	mvprintw(17, 20, "NOS VEMOS LUEGO!");
 	getch();
 	cleanScreen();
 	//cleanScreen()
