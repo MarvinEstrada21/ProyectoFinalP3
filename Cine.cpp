@@ -6,6 +6,7 @@ using namespace std;
 Cine::Cine(){
 
 }
+//void cargar();
 
 void Cine::run(){
 		srand(time(NULL));
@@ -120,7 +121,7 @@ void Cine::run(){
 				}else if(respuestavip[0]=='2'){
 
 				}else if(respuestavip[0]=='3'){
-					
+
 				}
 			}else if(respuestataquilla[0]=='2'){
 				char respuestapeliculas[1];
@@ -213,7 +214,22 @@ void Cine::boardPic(){
 }
 
 void Cine::dibujologo(){
-	mvprintw(5,20, "Cine");
+	mvprintw(5, 20, "Cine");
 }
+
+/*void cargar(){
+	ifstream archivo;
+	string texto;
+	archivo.open("Prueba.txt",ios::in);
+	if(archivo.fail()){
+		cout<<"No se pudo abrir el archivo ";
+		exit(1);
+	}
+	while(!archivo.eof()){
+		getline(archivo,texto);
+		cout<<texto<<endl;
+	}
+	archivo.close();
+}*/
 
 
