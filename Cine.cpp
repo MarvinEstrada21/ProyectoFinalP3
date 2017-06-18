@@ -26,7 +26,7 @@ void Cine::run(){
 		//Menu Principal
 		mvprintw(5, 20, "---BIENVENIDO AL CINE---:");
 		mvprintw(6, 20, " 1) Agregar Persona ");
-		mvprintw(7, 20, " 2) Ver una Pelicula ");
+		mvprintw(7, 20, " 2) Taquilla ");
 		mvprintw(8, 20, " 3) Comprar en la dulceria ");
 		mvprintw(9, 20, " 4) SALIR ");
 		mvprintw(10, 20, "ELIGA OPCION: ");
@@ -100,32 +100,56 @@ void Cine::run(){
 					int dinero2 =atoi(dinero1.c_str());
 			}
 		}else if(respuesta1[0]=='2'){
-			char respuestapeliculas[1];
-			mvprintw(5, 20, " Eliga la pelicula que desea ver ");
-			mvprintw(6, 20, " 1) Baywatch  ");
-			mvprintw(7, 20, " 2) Cars 3 ");
-			mvprintw(8, 20, " 3) La Momia ");
-			mvprintw(9, 20, " 4) La Mujer Maravilla ");
-			mvprintw(10, 20, " 5) Como Ser Un Latin Lover ");
-			mvprintw(11, 20, " 6) Resident Evil ");
-			mvprintw(12, 20, " 7) Piratas del Caribe ");
-			mvprintw(13, 20, "Eliga una opcion ");
-			getstr(respuestapeliculas);
+			char respuestataquilla[1];
+			mvprintw(5, 20, " Tipo de Sala ");
+			mvprintw(6, 20, " 1) Sala VIP  ");
+			mvprintw(7, 20, " 2) Sala Normal  ");
+			getstr(respuestataquilla);
 			cleanScreen();
-			if(respuestapeliculas[0]=='1'){
+			if(respuestataquilla[0]=='1'){
+				char respuestavip[1];
+				mvprintw(5, 20, "---Taquilla VIP");
+				mvprintw(6, 20, " 1) Cars 3 ");
+				mvprintw(7, 20, " 2) La Mujer Maravilla ");
+				mvprintw(8, 20, " 3) La Momia ");
+				mvprintw(9, 20, "Eliga una opcion ");
+				getstr(respuestavip);
+				cleanScreen();
+				if(respuestavip[0]=='1'){
 
-			}else if(respuestapeliculas[0]=='2'){
+				}else if(respuestavip[0]=='2'){
 
-			}else if(respuestapeliculas[0]=='3'){
+				}else if(respuestavip[0]=='3'){
+					
+				}
+			}else if(respuestataquilla[0]=='2'){
+				char respuestapeliculas[1];
+				mvprintw(5, 20, " Taquilla Normal ");
+				mvprintw(6, 20, " 1) Baywatch  ");
+				mvprintw(7, 20, " 2) Cars 3 ");
+				mvprintw(8, 20, " 3) La Momia ");
+				mvprintw(9, 20, " 4) La Mujer Maravilla ");
+				mvprintw(10, 20, " 5) Como Ser Un Latin Lover ");
+				mvprintw(11, 20, " 6) Resident Evil ");
+				mvprintw(12, 20, " 7) Piratas del Caribe ");
+				mvprintw(13, 20, "Eliga una opcion ");
+				getstr(respuestapeliculas);
+				cleanScreen();
+				if(respuestapeliculas[0]=='1'){
 
-			}else if(respuestapeliculas[0]=='4'){
+				}else if(respuestapeliculas[0]=='2'){
 
-			}else if(respuestapeliculas[0]=='5'){
+				}else if(respuestapeliculas[0]=='3'){	
 
-			}else if(respuestapeliculas[0]=='6'){
+				}else if(respuestapeliculas[0]=='4'){
 
-			}else if(respuestapeliculas[0]=='7'){
+				}else if(respuestapeliculas[0]=='5'){
 
+				}else if(respuestapeliculas[0]=='6'){
+
+				}else if(respuestapeliculas[0]=='7'){
+
+				}
 			}
 		}else if(respuesta1[0]=='3'){
 			char respuestacomida[1];
