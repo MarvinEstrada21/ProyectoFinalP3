@@ -13,5 +13,6 @@ class Dulceria {
 		Dulceria(double);
 
 		virtual double getPrecio();
+		//virtual string getTamaño()=0;
 };
 #endif

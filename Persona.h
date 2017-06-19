@@ -22,5 +22,7 @@ class Persona{
 
 		string getId();
 		void setId(string);
+
+		//virtual string getDescuento()=0;
 };
 #endif

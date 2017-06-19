@@ -11,5 +11,7 @@ class Taquilla {
 		Taquilla(double);
 
 		double getPrecio(char[], int);
+		//virtual string getTipo() = 0;
+
 };
 #endif
