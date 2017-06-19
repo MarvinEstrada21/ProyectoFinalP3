@@ -25,7 +25,7 @@ void Cine::run(){
 	while(seguir==true){
 		char respuesta1[1];
 		//Menu Principal
-		mvprintw(5, 20, "---BIENVENIDO AL CINE---:");
+		mvprintw(5, 20, "---BIENVENIDO AL CINE---");
 		mvprintw(6, 20, " 1) Agregar Persona ");
 		mvprintw(7, 20, " 2) Taquilla ");
 		mvprintw(8, 20, " 3) Comprar en la dulceria ");
