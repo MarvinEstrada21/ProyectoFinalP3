@@ -22,7 +22,7 @@
 #include "Pelicula.h"
 #include "Persona.h"
 #include "Refresco.h"
-#include "Trabajador.h"
+#include "Taquilla.h"
 #include "Sala.h"
 #include "Trabajador.h"
 

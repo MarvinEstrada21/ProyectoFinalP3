@@ -21,6 +21,7 @@ void Cine::run(){
 	vector<Comida*> lista_comida;
 	vector<Palomitas*> lista_palomitas;
 	Comida food;
+	Taquilla taqui;
 	bool seguir = true;
 	while(seguir==true){
 		char respuesta1[1];
@@ -61,7 +62,7 @@ void Cine::run(){
 					getstr(edad);
 					string edad1(edad);
 					int edad2 =atoi(edad1.c_str());
-					mvprintw(7, 20, "Numero de ID ");
+					mvprintw(7, 20, "Numero de ID: ");
 					char id [50];
 					getstr(id);
 					string id1 =static_cast<char*>(nombre);
@@ -75,7 +76,7 @@ void Cine::run(){
 					getstr(edad);
 					string edad1(edad);
 					int edad2 =atoi(edad1.c_str());
-					mvprintw(7, 20, "Numero de ID ");
+					mvprintw(7, 20, "Numero de ID: ");
 					char id [50];
 					getstr(id);
 					string id1 =static_cast<char*>(nombre);
@@ -102,6 +103,7 @@ void Cine::run(){
 			}
 		}else if(respuesta1[0]=='2'){
 			char respuestataquilla[1];
+			double price;
 			mvprintw(5, 20, " Tipo de Sala ");
 			mvprintw(6, 20, " 1) Sala VIP  ");
 			mvprintw(7, 20, " 2) Sala Normal  ");
@@ -115,13 +117,22 @@ void Cine::run(){
 				mvprintw(8, 20, " 3) La Momia ");
 				mvprintw(9, 20, "Eliga una opcion ");
 				getstr(respuestavip);
+				mvprintw(4, 20, "Pollo");
 				cleanScreen();
+
 				if(respuestavip[0]=='1'){
+					/*mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
+					char boletos[1];
+					getstr(boletos);
+					string boletos1(boletos);
+					int boletos2 = atoi(boletos1.c_str());
+					price = taqui.getPrecio(respuestataquilla, boletos2);*/
 
+					mvprintw(10, 20, "¡Disfrute su función!");
 				}else if(respuestavip[0]=='2'){
-
+					mvprintw(10, 20, "¡Disfrute su función!");
 				}else if(respuestavip[0]=='3'){
-
+					mvprintw(10, 20, "¡Disfrute su función!");
 				}
 			}else if(respuestataquilla[0]=='2'){
 				char respuestapeliculas[1];
