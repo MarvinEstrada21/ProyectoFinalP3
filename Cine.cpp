@@ -56,10 +56,13 @@ void Cine::run(){
 				getstr(respuestaempleado);
 				cleanScreen();
 				if(respuestaempleado[0]=='1'){
-					mvprintw(5, 20, "Ingrese el nombre de la persona: ");
+					mvprintw(4, 20, "Ingrese el nombre de la persona: ");
 					char nombre[50];
 					getstr(nombre);
 					string nombre1 = static_cast<char*>(nombre);
+
+					mvprintw(5, 20, "%s", nombre1);
+
 					mvprintw(6, 20, "Ingrese la edad: ");
 					char edad[2];
 					getstr(edad);
@@ -120,22 +123,49 @@ void Cine::run(){
 				mvprintw(8, 20, " 3) La Momia ");
 				mvprintw(9, 20, "Eliga una opcion ");
 				getstr(respuestavip);
-				mvprintw(4, 20, "Pollo");
 				cleanScreen();
-
 				if(respuestavip[0]=='1'){
-					/*mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
+					mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
 					char boletos[1];
-					getstr(boletos);0
+					getstr(boletos);
 					string boletos1(boletos);
-					int boletos2 = atoi(boletos1.c_str());
-					price = taqui.getPrecio(respuestataquilla, boletos2);*/
-
-					mvprintw(10, 20, "¡Disfrute su función!");
+					int boletos2 = atoi(boletos1.c_str()); //Leer el entero y guardarlo en una variable
+					price = taqui.getPrecio(respuestataquilla, boletos2); //Llamada del método que cálcula el precio según la taquilla
+					stringstream temp; 
+					temp << price; //declarar un stringstream para poder meter el precio e imprimirlo
+					string tempchar = temp.str();
+					char testchar[tempchar.size() + 1]; 
+					strcpy(testchar, tempchar.c_str()); //pasar el string del precio hacia char
+					mvprintw(7, 20, "Su total a pagar es: %s", testchar); //Imprimir el total de la compra
+					mvprintw(10, 20, "¡Disfrute su función de Cars 3!");
 				}else if(respuestavip[0]=='2'){
-					mvprintw(10, 20, "¡Disfrute su función!");
+					mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
+					char boletos[1];
+					getstr(boletos);
+					string boletos1(boletos);
+					int boletos2 = atoi(boletos1.c_str()); //Leer el entero y guardarlo en una variable
+					price = taqui.getPrecio(respuestataquilla, boletos2); //Llamada del método que cálcula el precio según la taquilla
+					stringstream temp; 
+					temp << price; //declarar un stringstream para poder meter el precio e imprimirlo
+					string tempchar = temp.str();
+					char testchar[tempchar.size() + 1]; 
+					strcpy(testchar, tempchar.c_str()); //pasar el string del precio hacia char
+					mvprintw(7, 20, "Su total a pagar es: %s", testchar); //Imprimir el total de la compra
+					mvprintw(10, 20, "¡Disfrute su función de La Mujer Maravilla!");
 				}else if(respuestavip[0]=='3'){
-					mvprintw(10, 20, "¡Disfrute su función!");
+					mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
+					char boletos[1];
+					getstr(boletos);
+					string boletos1(boletos);
+					int boletos2 = atoi(boletos1.c_str()); //Leer el entero y guardarlo en una variable
+					price = taqui.getPrecio(respuestataquilla, boletos2); //Llamada del método que cálcula el precio según la taquilla
+					stringstream temp; 
+					temp << price; //declarar un stringstream para poder meter el precio e imprimirlo
+					string tempchar = temp.str();
+					char testchar[tempchar.size() + 1]; 
+					strcpy(testchar, tempchar.c_str()); //pasar el string del precio hacia char
+					mvprintw(7, 20, "Su total a pagar es: %s", testchar); //Imprimir el total de la compra
+					mvprintw(10, 20, "¡Disfrute su función de La Momia!");
 				}
 			}else if(respuestataquilla[0]=='2'){
 				char respuestapeliculas[1];
@@ -151,19 +181,103 @@ void Cine::run(){
 				getstr(respuestapeliculas);
 				cleanScreen();
 				if(respuestapeliculas[0]=='1'){
-
+					mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
+					char boletos[1];
+					getstr(boletos);
+					string boletos1(boletos);
+					int boletos2 = atoi(boletos1.c_str()); //Leer el entero y guardarlo en una variable
+					price = taqui.getPrecio(respuestataquilla, boletos2); //Llamada del método que cálcula el precio según la taquilla
+					stringstream temp; 
+					temp << price; //declarar un stringstream para poder meter el precio e imprimirlo
+					string tempchar = temp.str();
+					char testchar[tempchar.size() + 1]; 
+					strcpy(testchar, tempchar.c_str()); //pasar el string del precio hacia char
+					mvprintw(7, 20, "Su total a pagar es: %s", testchar); //Imprimir el total de la compra
+					mvprintw(10, 20, "¡Disfrute su función de Baywatch!");
 				}else if(respuestapeliculas[0]=='2'){
-
+					mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
+					char boletos[1];
+					getstr(boletos);
+					string boletos1(boletos);
+					int boletos2 = atoi(boletos1.c_str()); //Leer el entero y guardarlo en una variable
+					price = taqui.getPrecio(respuestataquilla, boletos2); //Llamada del método que cálcula el precio según la taquilla
+					stringstream temp; 
+					temp << price; //declarar un stringstream para poder meter el precio e imprimirlo
+					string tempchar = temp.str();
+					char testchar[tempchar.size() + 1]; 
+					strcpy(testchar, tempchar.c_str()); //pasar el string del precio hacia char
+					mvprintw(7, 20, "Su total a pagar es: %s", testchar); //Imprimir el total de la compra
+					mvprintw(10, 20, "¡Disfrute su función de Cars 3!");
 				}else if(respuestapeliculas[0]=='3'){	
-
+					mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
+					char boletos[1];
+					getstr(boletos);
+					string boletos1(boletos);
+					int boletos2 = atoi(boletos1.c_str()); //Leer el entero y guardarlo en una variable
+					price = taqui.getPrecio(respuestataquilla, boletos2); //Llamada del método que cálcula el precio según la taquilla
+					stringstream temp; 
+					temp << price; //declarar un stringstream para poder meter el precio e imprimirlo
+					string tempchar = temp.str();
+					char testchar[tempchar.size() + 1]; 
+					strcpy(testchar, tempchar.c_str()); //pasar el string del precio hacia char
+					mvprintw(7, 20, "Su total a pagar es: %s", testchar); //Imprimir el total de la compra
+					mvprintw(10, 20, "¡Disfrute su función de La Momia!");
 				}else if(respuestapeliculas[0]=='4'){
-
+					mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
+					char boletos[1];
+					getstr(boletos);
+					string boletos1(boletos);
+					int boletos2 = atoi(boletos1.c_str()); //Leer el entero y guardarlo en una variable
+					price = taqui.getPrecio(respuestataquilla, boletos2); //Llamada del método que cálcula el precio según la taquilla
+					stringstream temp; 
+					temp << price; //declarar un stringstream para poder meter el precio e imprimirlo
+					string tempchar = temp.str();
+					char testchar[tempchar.size() + 1]; 
+					strcpy(testchar, tempchar.c_str()); //pasar el string del precio hacia char
+					mvprintw(7, 20, "Su total a pagar es: %s", testchar); //Imprimir el total de la compra
+					mvprintw(10, 20, "¡Disfrute su función de La Mujer Maravilla!");
 				}else if(respuestapeliculas[0]=='5'){
-
+					mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
+					char boletos[1];
+					getstr(boletos);
+					string boletos1(boletos);
+					int boletos2 = atoi(boletos1.c_str()); //Leer el entero y guardarlo en una variable
+					price = taqui.getPrecio(respuestataquilla, boletos2); //Llamada del método que cálcula el precio según la taquilla
+					stringstream temp; 
+					temp << price; //declarar un stringstream para poder meter el precio e imprimirlo
+					string tempchar = temp.str();
+					char testchar[tempchar.size() + 1]; 
+					strcpy(testchar, tempchar.c_str()); //pasar el string del precio hacia char
+					mvprintw(7, 20, "Su total a pagar es: %s", testchar); //Imprimir el total de la compra
+					mvprintw(10, 20, "¡Disfrute su función de Cómo Ser Un Latin Lover!");
 				}else if(respuestapeliculas[0]=='6'){
-
+					mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
+					char boletos[1];
+					getstr(boletos);
+					string boletos1(boletos);
+					int boletos2 = atoi(boletos1.c_str()); //Leer el entero y guardarlo en una variable
+					price = taqui.getPrecio(respuestataquilla, boletos2); //Llamada del método que cálcula el precio según la taquilla
+					stringstream temp; 
+					temp << price; //declarar un stringstream para poder meter el precio e imprimirlo
+					string tempchar = temp.str();
+					char testchar[tempchar.size() + 1]; 
+					strcpy(testchar, tempchar.c_str()); //pasar el string del precio hacia char
+					mvprintw(7, 20, "Su total a pagar es: %s", testchar); //Imprimir el total de la compra
+					mvprintw(10, 20, "¡Disfrute su función de Resident Evil!");
 				}else if(respuestapeliculas[0]=='7'){
-
+					mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
+					char boletos[1];
+					getstr(boletos);
+					string boletos1(boletos);
+					int boletos2 = atoi(boletos1.c_str()); //Leer el entero y guardarlo en una variable
+					price = taqui.getPrecio(respuestataquilla, boletos2); //Llamada del método que cálcula el precio según la taquilla
+					stringstream temp; 
+					temp << price; //declarar un stringstream para poder meter el precio e imprimirlo
+					string tempchar = temp.str();
+					char testchar[tempchar.size() + 1]; 
+					strcpy(testchar, tempchar.c_str()); //pasar el string del precio hacia char
+					mvprintw(7, 20, "Su total a pagar es: %s", testchar); //Imprimir el total de la compra
+					mvprintw(10, 20, "¡Disfrute su función de Piratas del Caribe!");
 				}
 			}
 		}else if(respuesta1[0]=='3'){
@@ -228,13 +342,28 @@ void Cine::boardPic(){
 }
 
 void Cine::dibujologo(){
-	string film = "pollo";
-	char carac[film.size() + 1];
-	strcpy(carac, film.c_str());
-	mvprintw(5, 20, "%s", carac);
+	ifstream Reader ("FILMS++.txt");
+	string Art = getFileContents(Reader);
+
+	char carac[Art.size() + 1];
+	strcpy(carac, Art.c_str());
+	mvprintw(1, 20, "%s", carac);
 	//mvprintw(5,20, "Cine ");	
+}
 
-
+string Cine :: getFileContents(ifstream& File) {
+	string Lines = "";
+	if (File) {
+		while (File.good()) {
+			string TempLine;
+			getline(File, TempLine);
+			TempLine += "\n";
+			Lines += TempLine;
+		}
+		return Lines;
+    } else {
+		return "ERROR archivo no existe.";
+    }
 }
 
 /*void cargar(){
