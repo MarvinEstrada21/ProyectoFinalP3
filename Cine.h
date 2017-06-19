@@ -43,6 +43,7 @@ class Cine{
 		void boardPic();
 		void dibujologo();
 		void cleanScreen();
+		string getFileContents (ifstream&);
 	/*	void run();
 		void boardPic();
 		void dibujologo();
