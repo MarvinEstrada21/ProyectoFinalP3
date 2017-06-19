@@ -1,5 +1,5 @@
 Main:	Main.o Administrador.o Cartelera.o Cine.o Cliente.o Comida.o Dulceria.o Dulces.o Empleado.o Palomitas.o Pelicula.o Persona.o Refresco.o Sala.o Taquilla.o Trabajador.o
-	g++ Main.o Administrador.o Cartelera.o Cine.o Cliente.o Comida.o Dulceria.o Dulces.o Empleado.o Palomitas.o Pelicula.o Persona.o Refresco.o Sala.o Taquilla.o Trabajador.o -o Main
+	g++ Main.o Administrador.o Cartelera.o Cine.o Cliente.o Comida.o Dulceria.o Dulces.o Empleado.o Palomitas.o Pelicula.o Persona.o Refresco.o Sala.o Taquilla.o Trabajador.o -lncurses -o Main
 
 Main.o:	Main.cpp Cine.h
 	g++ -c Main.cpp
