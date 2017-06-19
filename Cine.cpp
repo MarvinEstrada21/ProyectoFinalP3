@@ -3,6 +3,9 @@
 #include <vector>
 using namespace std;
 
+//#define NOMBRE_ARCHIVO "FILMS++.txt";
+
+	
 Cine::Cine(){
 
 }
@@ -123,7 +126,7 @@ void Cine::run(){
 				if(respuestavip[0]=='1'){
 					/*mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
 					char boletos[1];
-					getstr(boletos);
+					getstr(boletos);0
 					string boletos1(boletos);
 					int boletos2 = atoi(boletos1.c_str());
 					price = taqui.getPrecio(respuestataquilla, boletos2);*/
@@ -225,22 +228,41 @@ void Cine::boardPic(){
 }
 
 void Cine::dibujologo(){
-	mvprintw(5, 20, "Cine");
+	mvprintw(5,20, "Cine ");	
+
+
 }
 
 /*void cargar(){
+	char resp[2];
 	ifstream archivo;
-	string texto;
-	archivo.open("Prueba.txt",ios::in);
+	stringstream texto;
+	archivo.open("FILMS++.txt",ios::in);
 	if(archivo.fail()){
 		cout<<"No se pudo abrir el archivo ";
 		exit(1);
 	}
+	int acum;
+	acum++;
 	while(!archivo.eof()){
-		getline(archivo,texto);
-		cout<<texto<<endl;
+		//getline(archivo,texto);
+
+		//getsrt(texto);
+
+		mvprintw(acum, 20, "C ");
+		acum++;
+
 	}
 	archivo.close();
+
+}*/
+
+/*void  error(char* mensaje){
+	addstr(mensaje);
+	refresh();
+	getch();
+	endwin();
+	exit(EXIT_FAILURE);
 }*/
 
 

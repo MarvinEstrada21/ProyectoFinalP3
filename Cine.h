@@ -37,8 +37,8 @@ class Cine{
 		vector<Pelicula*> listapelicula;
 	public:
 		Cine();
-		void imprimirdulce();
-		void imprimirpelicula();
+		//void imprimirdulce();
+		//void imprimirpelicula();
 		void run();
 		void boardPic();
 		void dibujologo();
