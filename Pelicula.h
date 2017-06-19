@@ -1,4 +1,4 @@
-¿¿nclude <string>
+#include <string>
 
 #ifndef PELICULA_H
 #define PELICULA_H
