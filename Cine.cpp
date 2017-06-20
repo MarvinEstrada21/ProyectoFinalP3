@@ -39,6 +39,7 @@ void Cine::run(){
 		cleanScreen();
 		if(respuesta1[0]=='1'){
 			char respuestapersona[1];
+			//menu de crear personas
 			mvprintw(5, 20, " Que tipo de Persona quiere crear?: ");
 			mvprintw(6, 20, " 1) Un Empledo ");
 			mvprintw(7, 20, " 2) Un Cliente ");
@@ -48,6 +49,7 @@ void Cine::run(){
 			cleanScreen();
 			if(respuestapersona[0]=='1'){
 				char respuestaempleado[1];
+				//menu crear empleado
 				mvprintw(5, 20 , "Que tipo de empleado desea agregar?: ");
 				mvprintw(6, 20 ," 1) Un Administrador ");
 				mvprintw(7, 20 ," 2) Un Trabajador ");
@@ -56,6 +58,7 @@ void Cine::run(){
 				getstr(respuestaempleado);
 				cleanScreen();
 				if(respuestaempleado[0]=='1'){
+					//agregar administrador
 					mvprintw(4, 20, "Ingrese el nombre de la persona: ");
 					char nombre[50];
 					getstr(nombre);
@@ -73,6 +76,7 @@ void Cine::run(){
 					getstr(id);
 					string id1 =static_cast<char*>(nombre);
 				}else if(respuestaempleado[0]=='2'){
+					//agregar trabajador
 					mvprintw(5, 20, "Ingrese el nombre de la persona: ");
 					char nombre[50];
 					getstr(nombre);
@@ -88,6 +92,7 @@ void Cine::run(){
 					string id1 =static_cast<char*>(nombre);
 				}
 			}else if(respuestapersona[0]=='2'){
+				//agregar cliente
 					mvprintw(5, 20, "Ingrese el nombre de la persona: ");
 					char nombre[50];
 					getstr(nombre);
@@ -109,6 +114,7 @@ void Cine::run(){
 			}
 		}else if(respuesta1[0]=='2'){
 			char respuestataquilla[1];
+			//menu de taquilla
 			double price;
 			mvprintw(5, 20, " Tipo de Sala ");
 			mvprintw(6, 20, " 1) Sala VIP  ");
@@ -117,6 +123,7 @@ void Cine::run(){
 			cleanScreen();
 			if(respuestataquilla[0]=='1'){
 				char respuestavip[1];
+				//menu de seleccionar peliculas vip
 				mvprintw(5, 20, "---Taquilla VIP");
 				mvprintw(6, 20, " 1) Cars 3 ");
 				mvprintw(7, 20, " 2) La Mujer Maravilla ");
@@ -124,7 +131,7 @@ void Cine::run(){
 				mvprintw(9, 20, "Eliga una opcion ");
 				getstr(respuestavip);
 				cleanScreen();
-				if(respuestavip[0]=='1'){
+				if(respuestavip[0]=='1'){//seleccionar peliculas
 					mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
 					char boletos[1];
 					getstr(boletos);
@@ -169,6 +176,7 @@ void Cine::run(){
 				}
 			}else if(respuestataquilla[0]=='2'){
 				char respuestapeliculas[1];
+				//menu de peliculas normales
 				mvprintw(5, 20, " Taquilla Normal ");
 				mvprintw(6, 20, " 1) Baywatch  ");
 				mvprintw(7, 20, " 2) Cars 3 ");
@@ -180,7 +188,7 @@ void Cine::run(){
 				mvprintw(13, 20, "Eliga una opcion ");
 				getstr(respuestapeliculas);
 				cleanScreen();
-				if(respuestapeliculas[0]=='1'){
+				if(respuestapeliculas[0]=='1'){//seleccionar peliculas
 					mvprintw(5, 20, "Ingrese la cantidad de boletos a comprar (1-9): ");
 					char boletos[1];
 					getstr(boletos);
@@ -282,6 +290,7 @@ void Cine::run(){
 			}
 		}else if(respuesta1[0]=='3'){
 			char respuestacomida[1];
+			//menu seleccionar comida
 			double precio;
 			mvprintw(5, 20, " Eliga la comida ");
 			mvprintw(6, 20, " 1) Hotdog ");
@@ -292,7 +301,7 @@ void Cine::run(){
 			mvprintw(11, 20, " Eliga una opcion ");
 			getstr(respuestacomida);	
 			cleanScreen();
-			if(respuestacomida[0]=='1'){
+			if(respuestacomida[0]=='1'){//seleccionar comida
 				precio = food.getPrecio();
 				mvprintw(13, 20, " Su total a pagar es: Lps. 45.00");
 				lista_comida.push_back(new Comida("Hotdog", precio));
@@ -316,6 +325,7 @@ void Cine::run(){
 
 
 		}else{
+			//salir del programa
 			seguir=false;
 			mvprintw(17, 20, "NOS VEMOS LUEGO!");
 
@@ -328,7 +338,7 @@ void Cine::run(){
 	endwin();
 	}
 }
-
+//funcion limpia la pantalla
 void Cine::cleanScreen(){
 	for (int i = 0; i < LINES; i++){
 		for (int j = 0; j < COLS; j++){
@@ -341,6 +351,7 @@ void Cine::boardPic(){
 	move(1,1);
 }
 
+//funcion que muestra el logo del programa
 void Cine::dibujologo(){
 	ifstream Reader ("FILMS++.txt");
 	string Art = getFileContents(Reader);
@@ -351,6 +362,7 @@ void Cine::dibujologo(){
 	//mvprintw(5,20, "Cine ");	
 }
 
+//funcion lee el archivo
 string Cine :: getFileContents(ifstream& File) {
 	string Lines = "";
 	if (File) {
