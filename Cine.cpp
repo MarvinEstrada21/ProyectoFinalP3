@@ -9,7 +9,6 @@ using namespace std;
 Cine::Cine(){
 
 }
-//void cargar();
 
 void Cine::run(){
 	srand(time(NULL));
@@ -401,35 +400,3 @@ string Cine :: getFileContents(ifstream& File) {
 		return "ERROR archivo no existe.";
     }
 }
-
-/*void cargar(){
-	char resp[2];
-	ifstream archivo;
-	stringstream texto;
-	archivo.open("FILMS++.txt",ios::in);
-	if(archivo.fail()){
-		cout<<"No se pudo abrir el archivo ";
-		exit(1);
-	}
-	int acum;
-	acum++;
-	while(!archivo.eof()){
-		//getline(archivo,texto);
-
-		//getsrt(texto);
-
-		mvprintw(acum, 20, "C ");
-		acum++;
-
-	}
-	archivo.close();
-
-}*/
-
-/*void  error(char* mensaje){
-	addstr(mensaje);
-	refresh();
-	getch();
-	endwin();
-	exit(EXIT_FAILURE);
-}*/
