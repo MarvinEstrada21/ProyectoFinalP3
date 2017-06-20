@@ -12,7 +12,7 @@ Cine::Cine(){
 //void cargar();
 
 void Cine::run(){
-		srand(time(NULL));
+	srand(time(NULL));
 	initscr();
 	start_color();
 	echo();
@@ -20,6 +20,10 @@ void Cine::run(){
 	dibujologo();
 	getch();
 	cleanScreen();
+	ofstream archive;
+	ofstream archi;
+	archive.open("Clientes.txt", ios::app);
+	archi.open("Empleados.txt", ios::app);
 	vector<Dulceria*> lista_dulceria;
 	vector<Comida*> lista_comida;
 	vector<Palomitas*> lista_palomitas;
@@ -59,13 +63,10 @@ void Cine::run(){
 				cleanScreen();
 				if(respuestaempleado[0]=='1'){
 					//agregar administrador
-					mvprintw(4, 20, "Ingrese el nombre de la persona: ");
+					mvprintw(5, 20, "Ingrese el nombre de la persona: ");
 					char nombre[50];
 					getstr(nombre);
 					string nombre1 = static_cast<char*>(nombre);
-
-					mvprintw(5, 20, "%s", nombre1);
-
 					mvprintw(6, 20, "Ingrese la edad: ");
 					char edad[2];
 					getstr(edad);
@@ -74,7 +75,14 @@ void Cine::run(){
 					mvprintw(7, 20, "Numero de ID: ");
 					char id [50];
 					getstr(id);
-					string id1 =static_cast<char*>(nombre);
+					string id1 =static_cast<char*>(id);
+					archi << "Nombre: ";
+					archi << nombre1;
+					archi << ", Edad: ";
+					archi << edad1;
+					archi << ", ID: ";
+					archi << id1;
+					archi << endl;
 				}else if(respuestaempleado[0]=='2'){
 					//agregar trabajador
 					mvprintw(5, 20, "Ingrese el nombre de la persona: ");
@@ -89,7 +97,14 @@ void Cine::run(){
 					mvprintw(7, 20, "Numero de ID: ");
 					char id [50];
 					getstr(id);
-					string id1 =static_cast<char*>(nombre);
+					string id1 =static_cast<char*>(id);
+					archi << "Nombre: ";
+					archi << nombre1;
+					archi << ", Edad: ";
+					archi << edad1;
+					archi << ", ID: ";
+					archi << id1;
+					archi << endl;
 				}
 			}else if(respuestapersona[0]=='2'){
 				//agregar cliente
@@ -102,15 +117,22 @@ void Cine::run(){
 					getstr(edad);
 					string edad1(edad);
 					int edad2 =atoi(edad1.c_str());
-					mvprintw(7, 20, "Numero de ID ");
+					mvprintw(7, 20, "Numero de ID: ");
 					char id [50];
 					getstr(id);
-					string id1 =static_cast<char*>(nombre);
-					mvprintw(8, 20, "Cantidad de Dinero ");
+					string id1 =static_cast<char*>(id);
+					mvprintw(8, 20, "Cantidad de Dinero: ");
 					char dinero[50];
 					getstr(dinero);
 					string dinero1(dinero);
 					int dinero2 =atoi(dinero1.c_str());
+					archive << "Nombre: ";
+					archive << nombre1;
+					archive << ", Edad: ";
+					archive << edad1;
+					archive << ", ID: ";
+					archive << id1;
+					archive << endl;
 			}
 		}else if(respuesta1[0]=='2'){
 			char respuestataquilla[1];
@@ -337,7 +359,9 @@ void Cine::run(){
 	noecho();
 	endwin();
 	}
-}
+	archive.close();
+	archi.close();
+}//Fin metodo run()
 //funcion limpia la pantalla
 void Cine::cleanScreen(){
 	for (int i = 0; i < LINES; i++){

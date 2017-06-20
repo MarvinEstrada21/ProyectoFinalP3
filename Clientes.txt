@@ -1,0 +1,2 @@
+Nombre: Maria, Edad: 30, ID: Maria
+Nombre: Juan, Edad: 25, ID: 08011131
