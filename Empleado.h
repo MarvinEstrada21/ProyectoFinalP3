@@ -20,6 +20,6 @@ class Empleado : public Persona {
 		double getSalario();
 		void setSalario(double);
 
-		virtual string getRol();
+		virtual string getRol() = 0;
 }; 
 #endif

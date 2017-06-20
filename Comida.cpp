@@ -20,19 +20,16 @@ void Comida :: setPlatillo(string platillo) {
 	this -> platillo = platillo;
 }
 
-double Comida :: getPrecio() {
-	if (platillo == "hotdog" || platillo == "HotDog" || platillo == "Hotdog" || platillo == "hot dog" || platillo == "Hot dog" || platillo == "Hot Dog") {
+double Comida :: getPrecio(char resp[1]) {
+	if (resp[0] == '1') {
 		precio = 45.00;
-	} else if (platillo == "nachos" || platillo == "Nachos") {
+	} else if (resp[0] == '2') {
 		precio = 37.50;
-	} else if (platillo == "hamburguesa" || platillo == "Hamburguesa") {
+	} else if (resp[0] == '3') {
 		precio = 50.00;
-	} else if (platillo == "panino" || platillo == "Panini") {
+	} else if (resp[0] == '4') {
 		precio = 55.00;
-	} else {
-		precio = 0;
-	}
-	if (platillo == "papas" || platillo == "Papas") {
+	} else if (resp[0] == '5') {
 		precio = 25.00;
 	} else {
 		precio = 0;

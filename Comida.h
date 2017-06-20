@@ -17,6 +17,6 @@ class Comida : public Dulceria {
 		string getPlatillo();
 		void setPlatillo(string);
 
-		double getPrecio();
+		double getPrecio(char[]);
 };
 #endif

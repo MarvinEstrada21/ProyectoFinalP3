@@ -19,5 +19,6 @@ void Trabajador :: setPuesto(string puesto) {
 }
 
 string Trabajador :: getRol() {
+	Empleado :: getRol();
 	return "Trabajador";
 }

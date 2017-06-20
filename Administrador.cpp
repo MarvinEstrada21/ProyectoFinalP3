@@ -19,5 +19,6 @@ void Administrador :: setCant_Trab(int cant_trab) {
 }
 
 string Administrador :: getRol() {
+	Empleado :: getRol();
 	return "Administrador";
 }

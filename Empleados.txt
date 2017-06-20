@@ -1,1 +1,2 @@
-Nombre: Jose, Edad: 36, ID: 6532154
+Nombre: Pedro, Edad: 50, ID: 865321, Rol: Administrador
+Nombre: Pocoyo, Edad: 7, ID: 864213, Rol: Trabajador

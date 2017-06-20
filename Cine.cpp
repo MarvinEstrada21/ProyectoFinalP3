@@ -28,9 +28,12 @@ void Cine::run(){
 	vector<Palomitas*> lista_palomitas;
 	Comida food;
 	Taquilla taqui;
+	Administrador admin;
+	Trabajador trab;
 	bool seguir = true;
 	while(seguir==true){
-		char respuesta1[1];
+
+		char respuesta1[100];
 		//Menu Principal
 		mvprintw(5, 20, "---BIENVENIDO AL CINE---");
 		mvprintw(6, 20, " 1) Agregar Persona ");
@@ -61,6 +64,7 @@ void Cine::run(){
 				getstr(respuestaempleado);
 				cleanScreen();
 				if(respuestaempleado[0]=='1'){
+					string rol = admin.getRol();
 					//agregar administrador
 					mvprintw(5, 20, "Ingrese el nombre de la persona: ");
 					char nombre[50];
@@ -81,8 +85,11 @@ void Cine::run(){
 					archi << edad1;
 					archi << ", ID: ";
 					archi << id1;
+					archi << ", Rol: ";
+					archi << rol;
 					archi << endl;
 				}else if(respuestaempleado[0]=='2'){
+					string turn = trab.getRol();
 					//agregar trabajador
 					mvprintw(5, 20, "Ingrese el nombre de la persona: ");
 					char nombre[50];
@@ -103,6 +110,8 @@ void Cine::run(){
 					archi << edad1;
 					archi << ", ID: ";
 					archi << id1;
+					archi << ", Rol: ";
+					archi << turn;
 					archi << endl;
 				}
 			}else if(respuestapersona[0]=='2'){
@@ -322,26 +331,58 @@ void Cine::run(){
 			mvprintw(11, 20, " Eliga una opcion ");
 			getstr(respuestacomida);	
 			cleanScreen();
-			if(respuestacomida[0]=='1'){//seleccionar comida
-				precio = food.getPrecio();
-				mvprintw(13, 20, " Su total a pagar es: Lps. 45.00");
+			if(respuestacomida[0]=='1') {//seleccionar comida
+				stringstream acum;
+				string total;
+				precio = food.getPrecio(respuestacomida);
+				acum << precio;
+				total = acum.str();
+				char testchar[total.size() + 1]; 
+				strcpy(testchar, total.c_str());
+				mvprintw(5, 20, " Su total a pagar es: %s", testchar);
 				lista_comida.push_back(new Comida("Hotdog", precio));
-			}else if(respuestacomida[0]=='2'){
-				precio = food.getPrecio();
-				mvprintw(13, 20, " Su total a pagar es: Lps. 37.50");
+			}else if(respuestacomida[0]=='2') {
+				stringstream acum;
+				string total;
+				precio = food.getPrecio(respuestacomida);
+				acum << precio;
+				total = acum.str();
+				char testchar[total.size() + 1]; 
+				strcpy(testchar, total.c_str());
+				mvprintw(5, 20, " Su total a pagar es: %s", testchar);
 				lista_comida.push_back(new Comida("Nachos", precio));
-			}else if(respuestacomida[0]=='3'){
-				precio = food.getPrecio();
-				mvprintw(13, 20, " Su total a pagar es: Lps. 50.00");
+			}else if(respuestacomida[0]=='3') {
+				stringstream acum; 
+				string total;
+				precio = food.getPrecio(respuestacomida);
+				acum << precio;
+				total = acum.str();
+				char testchar[total.size() + 1]; 
+				strcpy(testchar, total.c_str());
+				mvprintw(5, 20, " Su total a pagar es: %s", testchar);
 				lista_comida.push_back(new Comida("Hamburguesa", precio));
-			}else if(respuestacomida[0]=='4'){
-				precio = food.getPrecio();
-				mvprintw(13, 20, " Su total a pagar es: Lps. 55.00");
+			}else if(respuestacomida[0]=='4') {
+				stringstream acum;
+				string total;
+				precio = food.getPrecio(respuestacomida);
+				acum << precio;
+				total = acum.str();
+				char testchar[total.size() + 1]; 
+				strcpy(testchar, total.c_str());
+				mvprintw(5, 20, " Su total a pagar es: %s", testchar);
 				lista_comida.push_back(new Comida("Panino", precio));
-			}else if(respuestacomida[0]=='5'){
-				precio = food.getPrecio();
-				mvprintw(13, 20, " Su total a pagar es: Lps. 25.00");
+			}else if(respuestacomida[0]=='5') {
+				stringstream acum;
+				string total;
+				precio = food.getPrecio(respuestacomida);
+				acum << precio;
+				total = acum.str();
+				char testchar[total.size() + 1]; 
+				strcpy(testchar, total.c_str());
+				mvprintw(5, 20, " Su total a pagar es: %s", testchar);
 				lista_comida.push_back(new Comida("Papas", precio));
+			} else {
+				mvprintw(5, 20, "Respuesta no válida, intente más tarde");
 			}
 
 
